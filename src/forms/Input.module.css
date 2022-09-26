@@ -1,15 +1,25 @@
 .input {
-  width: 50%;
-  margin: auto;
+  /* width: 50%;
+  margin: auto; */
   margin-bottom: 2rem;
 }
-
-.input label {
+.contentInput{
+  display: flex;
+  flex-direction: row;
+}
+.labelStyle{
   font-weight: bold;
   margin-right: 1rem;
+  width: 30%;
+  display: block;  
+  border: 1px dashed green;
 }
+/* .input label {
+  font-weight: bold;
+  margin-right: 1rem;
+} */
 
-.input input {
+/* .input input {
   width: 3rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -25,10 +35,19 @@
   font: inherit;
   padding-left: 0.5rem;
   width: 50%;
-}
+} */
 
 .errorText {
   color: red;
-  
-
 }
+
+.test{
+  border: 1px dashed red;
+}
+
+@media only screen and (max-width: 425px) {
+  .contentInput{
+    display: flex;
+    flex-direction: column;
+  }
+} 
