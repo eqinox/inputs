@@ -30,7 +30,21 @@ transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 .responseErrorText{
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
+}
+.fakeIcon{
+  font-family: 'PT Serif', serif;
+  font-size: 17px;
+  border-radius: 50%;
+  border: 1px solid red;
+  padding: 3px;
+  line-height: 17px;
+  width: 15px;
+  height: 15px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 10px;
 }
 /* .input label {
   font-weight: bold;
@@ -57,10 +71,10 @@ transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
 .errorText {
   color: red;
-}
-
-.test{
   border: 1px dashed red;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
 }
 
 @media only screen and (max-width: 425px) {

@@ -8,7 +8,7 @@ const Input = (props) => {
       <label className={classes.labelStyle} htmlFor={props.input.id}>{props.placeholder}</label>
       <div className={classes.responseErrorText}>
       <input className={classes.inputStyle} onChange={props.changeValue}  {...props.input} onBlur={props.onBlur} />
-      {props.hasError && <p className={classes.errorText}>{props.placeholder} must not be empty</p>}
+      {props.hasError && <p className={classes.errorText}><span className={classes.fakeIcon}>i</span> {props.placeholder} must not be empty</p>}
       </div>
     </div>
   );
