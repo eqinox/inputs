@@ -9,10 +9,28 @@
 }
 .labelStyle{
   font-weight: bold;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   width: 30%;
   display: block;  
-  border: 1px dashed green;
+  /* border: 1px dashed green; */
+}
+.inputStyle{
+  display: block;
+/* width: 100%; */
+padding: 10px;
+color: #4b566b;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #dae1e7;
+appearance: none;
+border-radius: 5px;
+box-shadow: inset 0 1px 2px transparent;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.responseErrorText{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
 }
 /* .input label {
   font-weight: bold;
