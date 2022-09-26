@@ -1,0 +1,19 @@
+.result {
+
+    margin: auto;
+    width: 80%;
+}
+
+.result>div {
+    margin-bottom: 50px;
+}
+
+.result>div>div {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid green;
+    border-left: 1px solid green;
+    border-radius: 10px;
+}

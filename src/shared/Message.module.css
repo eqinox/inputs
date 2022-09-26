@@ -1,0 +1,24 @@
+.message {
+    position: absolute;
+    width: 50%;
+    height: 50px;
+    margin-left: 25%;
+    top: 70%;
+    padding: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    line-height: 50px;
+    color: black;
+}
+
+.success {
+    background-color: greenyellow;
+}
+
+.error {
+    background-color: red;
+}
+
+.info {
+    background-color: aqua;
+}
