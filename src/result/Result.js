@@ -6,13 +6,21 @@ const Result = () => {
     const items = useSelector((state) => state.items.all);
 
     return (
-        <div className={classes.result}>
+        <div className={classes.containerStyle}>
             {items.map((item) => (
                 <div key={item.id}>
-                    {item.firstName && <div>{item.firstName}</div>}
-                    {item.lastName && <div>{item.lastName}</div>}
-                    {item.email && <div>{item.email}</div>}
-                    {item.description && <div>{item.description}</div>}
+                    {item.firstName && <div className={classes.rowContainerStyle}>
+                        <span className={classes.spanStyle}>firstName:</span>{item.firstName}
+                        </div>}
+                    {item.lastName && <div className={classes.rowContainerStyle}>
+                        <span className={classes.spanStyle}>lastName:</span>
+                        {item.lastName}</div>}
+                    {item.email && <div className={classes.rowContainerStyle}>
+                        <span className={classes.spanStyle}>email:</span>
+                        {item.email}</div>}
+                    {item.description && <div className={classes.rowContainerStyle}>
+                        <span className={classes.spanStyle}>description:</span>
+                        {item.description}</div>}
                 </div>
             ))}
         </div>
