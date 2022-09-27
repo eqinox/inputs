@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { FormContext } from '../FormContext';
 
 import classes from './Input.module.css';
 
-const Input = (props) => {
+const Input = ({ id, placeholder, required }) => {
+  const { handleChange } = useContext(FormContext)
+
   return (
     <div className={classes.input + ' ' + classes.contentInput}>
-      <label className={classes.labelStyle} htmlFor={props.input.id}>{props.placeholder}</label>
+      <label className={classes.labelStyle} htmlFor={id}>{placeholder}</label>
       <div className={classes.responseErrorText}>
-      <input className={classes.inputStyle} onChange={props.changeValue}  {...props.input} onBlur={props.onBlur} />
-      {props.hasError && <p className={classes.errorText}><span className={classes.fakeIcon}>i</span> {props.placeholder} must not be empty</p>}
+        <input
+          placeholder={placeholder}
+          name={id}
+          className={classes.inputStyle}
+          onChange={event => handleChange(id, event)}
+          required={required}
+        />
+        <p className={classes.invalid + ' ' + classes.errorText}><span className={classes.fakeIcon}>i</span> {placeholder} is required</p>
+
       </div>
     </div>
   );

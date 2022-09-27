@@ -1,38 +1,38 @@
 .input {
-  /* width: 50%;
-  margin: auto; */
   margin-bottom: 2rem;
 }
-.contentInput{
+
+.contentInput {
   display: flex;
   flex-direction: column;
 }
-.labelStyle{
+
+.labelStyle {
   font-weight: bold;
-  /* margin-right: 1rem; */
   width: 30%;
-  display: block;  
-  /* border: 1px dashed green; */
-}
-.inputStyle{
   display: block;
-/* width: 100%; */
-padding: 10px;
-color: #4b566b;
-background-color: #fff;
-background-clip: padding-box;
-border: 1px solid #dae1e7;
-appearance: none;
-border-radius: 5px;
-box-shadow: inset 0 1px 2px transparent;
-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.responseErrorText{
+
+.inputStyle {
+  display: block;
+  padding: 10px;
+  color: #4b566b;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #dae1e7;
+  appearance: none;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px transparent;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.responseErrorText {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.fakeIcon{
+
+.fakeIcon {
   font-family: 'PT Serif', serif;
   font-size: 17px;
   border-radius: 50%;
@@ -41,33 +41,11 @@ transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   line-height: 17px;
   width: 15px;
   height: 15px;
-  display: block;
+  display: inline-block;
   text-align: center;
   font-weight: bold;
   margin-right: 10px;
 }
-/* .input label {
-  font-weight: bold;
-  margin-right: 1rem;
-} */
-
-/* .input input {
-  width: 3rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font: inherit;
-  padding-left: 0.5rem;
-  width: 50%;
-}
-
-.input textarea {
-  width: 3rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font: inherit;
-  padding-left: 0.5rem;
-  width: 50%;
-} */
 
 .errorText {
   color: red;
@@ -75,4 +53,12 @@ transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   padding: 5px;
   border-radius: 5px;
   display: flex;
+}
+
+.invalid {
+  display: none;
+}
+
+input[dirty=true]:required:invalid+p.invalid {
+  display: block;
 }
