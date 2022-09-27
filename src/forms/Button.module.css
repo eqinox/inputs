@@ -27,6 +27,7 @@
   .button:disabled {
     cursor: not-allowed;
   }
+
   .buttonContainerStyle{
     display: flex;
     flex-direction: row;
