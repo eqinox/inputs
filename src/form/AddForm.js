@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import Input from "./Input";
 import classes from './AddForm.module.css';
-import TextArea from "./TextArea";
-import Button from "./Button";
+import Button from "./elements/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { itemActions } from "../store/item-slice";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +8,7 @@ import { configActions } from "../store/config-slice";
 import messageTypes from "../shared/message-types";
 import { FormContext } from "../FormContext";
 import formJSON from '../formElements.json';
+import Element from "./elements/Element";
 
 const AddForm = () => {
     const dispatch = useDispatch();
@@ -22,18 +21,14 @@ const AddForm = () => {
         setElements(formJSON[0])
     }, []);
 
-    const handleChange = (id, event) => {
+    const handleChange = (givenId, event) => {
         event.target.setAttribute('dirty', true);
         const newElements = { ...elements }
         newElements.fields.forEach(field => {
-            const { type, field_id } = field;
-
-            if (id === field_id) {
+            const { type, id } = field;
+            if (givenId === id) {
                 switch (type) {
                     case 'text':
-                        field['value'] = event.target.value;
-                        break;
-                    case 'textarea':
                         field['value'] = event.target.value;
                         break;
                     default:
@@ -47,7 +42,7 @@ const AddForm = () => {
     }
     const items = useSelector((state) => state.items.all);
 
-    const submit = (event, second) => {
+    const submit = (event) => {
         event.preventDefault();
 
         const itemsForResult = [];
@@ -56,7 +51,7 @@ const AddForm = () => {
             const tempField = event.target[i];
             if (tempField.name) {
                 const fieldToAdd = {
-                    placeholder: tempField.placeholder,
+                    placeholder: tempField.placeholder || tempField.name,
                     value: tempField.value,
                     id: i + 1 // used for key
                 };
@@ -74,28 +69,8 @@ const AddForm = () => {
         <div className={classes.form}>
             <FormContext.Provider value={{ handleChange }}>
                 <form onSubmit={submit} >
-                    {fields ? fields.map((field, i) => {
-                        switch (field.type) {
-                            case 'text':
-                                return <Input
-                                    key={i}
-                                    id={field.id}
-                                    placeholder={field.id}
-                                    value={field.value}
-                                    required={field.required}
-                                />
-                            case 'textarea':
-                                return <TextArea
-                                    key={i}
-                                    id={field.id}
-                                    placeholder={field.id}
-                                    value={field.value}
-                                    required={field.required}
-                                />
-                        }
+                    {fields ? <Element fields={fields} /> : null}
 
-
-                    }) : null}
                     <Button type="submit">Submit</Button>
 
                 </form>

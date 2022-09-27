@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './shared/Navbar';
 import { Route, Routes } from "react-router-dom";
-import AddForm from './forms/AddForm';
+import AddForm from './form/AddForm';
 import Result from './result/Result';
 import Message from './shared/Message';
 import { useDispatch, useSelector } from 'react-redux';

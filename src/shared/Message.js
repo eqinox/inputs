@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { configActions } from '../store/config-slice';
 import messageTypes from './message-types';
 import classes from './Message.module.css';

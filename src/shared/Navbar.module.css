@@ -3,3 +3,10 @@
      margin-right: 20px;
      font-size: xx-large;
  }
+
+ @media only screen and (max-width: 425px) {
+    li {
+        display: block;
+        margin-bottom: 20px;
+    }
+  }

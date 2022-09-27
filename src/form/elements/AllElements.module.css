@@ -9,7 +9,7 @@
 
 .labelStyle {
   font-weight: bold;
-  width: 30%;
+  width: 50%;
   display: block;
 }
 
@@ -47,6 +47,14 @@
   margin-right: 10px;
 }
 
+.combinedItem {
+  display: flex;
+}
+
+.combinedItem>div {
+  margin-right: 20px;
+}
+
 .errorText {
   color: red;
   border: 1px dashed red;
@@ -61,4 +69,10 @@
 
 input[dirty=true]:required:invalid+p.invalid {
   display: block;
+}
+
+@media only screen and (max-width: 425px) {
+  .combinedItem {
+    display: block;
+  }
 }

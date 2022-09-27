@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
-import { FormContext } from '../FormContext';
+import { FormContext } from '../../FormContext';
 
-import classes from './Input.module.css';
+import classes from './AllElements.module.css';
 
 const TextArea = ({ id, placeholder, required }) => {
   const { handleChange } = useContext(FormContext)
