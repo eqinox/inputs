@@ -40,7 +40,8 @@ const AddForm = () => {
             setElements(newElements)
         });
     }
-    const items = useSelector((state) => state.items.all);
+    
+    const items = useSelector((state) => state.items.all); 
 
     const submit = (event) => {
         event.preventDefault();
@@ -63,7 +64,7 @@ const AddForm = () => {
         navigate('/result', { replace: true });
         dispatch(configActions.showMessage({ type: messageTypes.success, text: 'Thank you ' + itemsForResult.map((item) => item.value).join(' ') }));
         dispatch(itemActions.setItems(itemsForResult));
-    }
+    } 
 
     return (
         <div className={classes.form}>
@@ -71,7 +72,8 @@ const AddForm = () => {
                 <form onSubmit={submit} >
                     {fields ? <Element fields={fields} /> : null}
 
-                    <Button type="submit">Submit</Button>
+                    <Button type="submit"  >Submit</Button>
+                    <Button type="button" disabled={true} >Submit</Button> 
 
                 </form>
             </FormContext.Provider>

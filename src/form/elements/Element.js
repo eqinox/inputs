@@ -35,17 +35,20 @@ const Element = ({ fields }) => {
         }
     }
 
-    const result = fields.map((field, i) => {
-        if (field.length) {
-            return <div key={i} className={classes.combinedItem}>
-                {field.map((innerF, f) => {
-                    return renderAllFields(innerF, f)
-                })}
-            </div>
-        } else {
-            return renderAllFields(field, i)
-        }
-    })
+    const createFields = (fields) => {
+        return fields.map((field, i) => {
+
+            if (Array.isArray(field)) {
+                return <div key={i} className={classes.combinedItem}>
+                    {createFields(field)}
+                </div>
+            } else {
+                return renderAllFields(field, i)
+            }
+        })
+    }
+
+    const result = createFields(fields);
 
     return result
 }

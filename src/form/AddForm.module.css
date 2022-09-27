@@ -5,3 +5,22 @@
     padding: 2% 10% 2% 10%;
 }
 
+form:invalid .validBtn {
+    display: none;
+}
+
+form:invalid [type="submit"] {
+    display: none;
+}
+
+form:valid [type="button"] {
+    display: none;
+}
+
+form [type="button"] {
+    cursor: not-allowed;
+}
+
+.validBtn {}
+
+.invalidBtn {}
