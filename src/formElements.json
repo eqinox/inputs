@@ -1,0 +1,27 @@
+[
+    {
+        "page_label": "Input Form",
+        "fields": [
+            {
+                "id": "firstName",
+                "required": true,
+                "type": "text"
+            },
+            {
+                "id": "lastName",
+                "required": true,
+                "type": "text"
+            },
+            {
+                "id": "Email",
+                "required": true,
+                "type": "text"
+            },
+            {
+                "id": "address1",
+                "placeholder": "Address 1",
+                "type": "text"
+            }
+        ]
+    }
+]
