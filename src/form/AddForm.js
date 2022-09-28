@@ -15,7 +15,7 @@ const AddForm = () => {
     const navigate = useNavigate();
 
     const [elements, setElements] = useState(null);
-    const { fields, page_label } = elements ?? {};
+    const { fields } = elements ?? {};
 
     useEffect(() => {
         setElements(formJSON[0])

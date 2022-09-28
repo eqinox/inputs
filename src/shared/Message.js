@@ -22,7 +22,7 @@ const Message = (props) => {
             background = classes.error;
             break;
         }
-        case messageTypes.info: {
+        default: {
             background = classes.info
             break;
         }

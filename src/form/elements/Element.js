@@ -32,6 +32,7 @@ const Element = ({ fields }) => {
                     options={field.options}
                     required={field.required}
                 />
+            default: return null;
         }
     }
 

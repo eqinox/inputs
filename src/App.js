@@ -20,7 +20,7 @@ function App() {
     return () => {
       clearTimeout(identifier);
     }
-  }, [message]);
+  }, [message, dispatch]);
   
   return (
     <div className="App">
