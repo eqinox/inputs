@@ -33,7 +33,7 @@
     flex-direction: row;
     align-self: flex-end;
     width: 100%;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   
