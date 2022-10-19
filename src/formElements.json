@@ -1,4 +1,5 @@
-[
+[ 
+
     {
         "page_label": "Input Form",
         "fields": [
@@ -28,20 +29,20 @@
             },
             [
                 {
-                    "id": "city",
+                    "id": "City",
                     "type": "text"
                 },
                 {
-                    "id": "state",
+                    "id": "State",
                     "type": "text"
                 },
                 {
-                    "id": "zip",
+                    "id": "Zip",
                     "type": "text"
                 }
             ],
             {
-                "id": "phone",
+                "id": "Phone",
                 "required": true,
                 "type": "text"
             },

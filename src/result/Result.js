@@ -13,7 +13,7 @@ const Result = () => {
                         <div key={`${field.id}`}>
                             {field.value && <div className={classes.rowContainerStyle}>
                                 <span className={classes.spanStyle}>{field.placeholder}</span>
-                                {field.value}
+                                {field.value.charAt(0).toUpperCase() + field.value.slice(1)}
                             </div>}
                         </div>
                     ))}
